@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HostelDesk - Complaint Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">HostelCMS</div>
+    <button class="nav-btn" onclick="openModal('student')">Sign In</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hostel Complaint<br>Management System</h1>
+    <p>Students can submit hostel complaints. Admins can view and resolve them. Secure login for both roles.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal('student')">Student Login</button>
+      <button class="btn-outline" onclick="openModal('admin')">Admin Login</button>
+    </div>
+  </section>
+
+  <!-- PORTALS -->
+  <section class="portals" id="portals">
+    <h2>Two Portals, One System</h2>
+    <div class="portal-grid">
+
+      <div class="portal-card student">
+        <div class="portal-icon">🎓</div>
+        <h3>Student Portal</h3>
+        <p>Log in to submit and track your hostel complaints from start to resolution.</p>
+        <ul>
+          <li>Submit complaints with details</li>
+          <li>Track status in real time</li>
+          <li>View complaint history</li>
+          <li>Get admin responses</li>
+        </ul>
+        <button onclick="openModal('student')">Login as Student</button>
+      </div>
+
+      <div class="portal-card admin">
+        <div class="portal-icon">🛡️</div>
+        <h3>Admin Portal</h3>
+        <p>Log in to view all student complaints and mark them as resolved.</p>
+        <ul>
+          <li>View all complaints</li>
+          <li>Update complaint status</li>
+          <li>Add resolution remarks</li>
+          <li>Filter by category or date</li>
+        </ul>
+        <button onclick="openModal('admin')">Login as Admin</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Student Logs In</h4>
+        <p>Authenticate securely using hostel credentials.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Submit Complaint</h4>
+        <p>Fill in category, room number, and description.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Admin Reviews</h4>
+        <p>Admin sees all complaints and updates the status.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Issue Resolved</h4>
+        <p>Student sees the update. History is preserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

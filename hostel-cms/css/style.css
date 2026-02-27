@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+}
+
+/* ---- NAV ---- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  background: #fff;
+  border-bottom: 1px solid #e0e4ee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: -0.5px;
+}
+
+.nav-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ---- HERO ---- */
+.hero {
+  text-align: center;
+  padding: 90px 40px 70px;
+  background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+  border-bottom: 1px solid #e0e4ee;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1e3a8a;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #64748b;
+  max-width: 500px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  padding: 13px 30px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---- PORTALS ---- */
+.portals {
+  padding: 80px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portals h2,
+.how h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.portal-card {
+  background: #fff;
+  border: 1px solid #e0e4ee;
+  border-radius: 14px;
+  padding: 36px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.portal-card.student {
+  border-top: 4px solid #2563eb;
+}
+
+.portal-card.admin {
+  border-top: 4px solid #f97316;
+}
+
+.portal-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.portal-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.portal-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.portal-card ul {
+  list-style: none;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portal-card ul li {
+  font-size: 0.88rem;
+  color: #374151;
+  padding-left: 18px;
+  position: relative;
+}
+
+.portal-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.portal-card.student ul li::before { color: #2563eb; }
+.portal-card.admin ul li::before { color: #f97316; }
+
+.portal-card button {
+  padding: 11px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #fff;
+}
+
+.portal-card.student button { background: #2563eb; }
+.portal-card.student button:hover { background: #1d4ed8; }
+.portal-card.admin button { background: #f97316; }
+.portal-card.admin button:hover { background: #ea6c0a; }
+
+/* ---- HOW IT WORKS ---- */
+.how {
+  background: #fff;
+  border-top: 1px solid #e0e4ee;
+  padding: 80px 60px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 12px;
+  background: #f5f7fa;
+  border: 1px solid #e0e4ee;
+}
+
+.step-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.step h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 44px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.25s;
+}
+
+.modal-overlay.open .modal {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f1f5f9;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #64748b;
+  transition: background 0.2s;
+}
+
+.modal-close:hover { background: #e2e8f0; }
+
+.modal-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.modal h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.modal p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: opacity 0.2s, transform 0.15s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .hero { padding: 60px 24px 50px; }
+  .hero h1 { font-size: 2rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .portals { padding: 60px 24px; }
+  .portal-grid { grid-template-columns: 1fr; }
+  .how { padding: 60px 24px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .modal { padding: 32px 24px; margin: 0 16px; }
+}
